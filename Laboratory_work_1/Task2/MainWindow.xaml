@@ -1,0 +1,137 @@
+﻿<Window x:Class="Task2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вычисление квадратного корня методом Ньютона" 
+        Height="700" Width="900"
+        Background="White" KeyDown="Window_KeyDown">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#F8F8F8"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#005A9E"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="#F8F8F8"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="AutoGenerateColumns" Value="True"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#E0E0E0"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Вычисление квадратного корня методом Ньютона" 
+                   FontSize="18" FontWeight="Bold" Foreground="#007ACC" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Ввод данных -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Число:" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="inputTextBox" Width="150" Text="10" Margin="5,0,0,0"/>
+
+
+            <Label Content="Начальное приближение:" Margin="20,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+            <ComboBox x:Name="initialGuessComboBox" Width="215" SelectedIndex="0" Margin="5,0,0,0">
+                <ComboBoxItem Content="Автоматически (умный алгоритм)"/>
+                <ComboBoxItem Content="Число / 2"/>
+                <ComboBoxItem Content="Пользовательское"/>
+            </ComboBox>
+
+            <TextBox x:Name="customGuessTextBox" Width="100" Text="1" Visibility="Collapsed" 
+                     Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <!-- Кнопки управления -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+            <Button x:Name="calculateButton" Content="Вычислить полностью" Click="CalculateButton_Click"/>
+            <Button x:Name="stepButton" Content="Следующая итерация" Click="StepButton_Click"/>
+            <Button x:Name="resetButton" Content="Сброс" Click="ResetButton_Click"/>
+        </StackPanel>
+
+        <!-- Результаты -->
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,10,15">
+            <Label Content="Метод Math.Sqrt (точное значение):" FontWeight="Bold"/>
+            <Label x:Name="frameworkLabel" Content="-" Background="#F0F0F0" Padding="10" 
+                   FontFamily="Consolas" BorderBrush="#CCCCCC" BorderThickness="1"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="10,0,0,15">
+            <Label Content="Метод Ньютона:" FontWeight="Bold"/>
+            <Label x:Name="newtonLabel" Content="-" Background="#F0F0F0" Padding="10" 
+                   FontFamily="Consolas" BorderBrush="#CCCCCC" BorderThickness="1"/>
+        </StackPanel>
+
+        <!-- Статус -->
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" x:Name="statusTextBlock" Text="Введите число и нажмите кнопку для вычисления" 
+                   Foreground="#666666" Margin="0,0,0,10" FontStyle="Italic"/>
+
+        <!-- Таблица итераций -->
+        <Border Grid.Row="5" Grid.ColumnSpan="2" BorderBrush="#CCCCCC" BorderThickness="1" Margin="0,10,0,0">
+            <DataGrid x:Name="iterationsDataGrid" Background="White" Foreground="Black"
+                      MaxHeight="300" HeadersVisibility="Column" AutoGenerateColumns="True"/>
+        </Border>
+
+        <!-- Подсказка -->
+        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="Нажмите ПРОБЕЛ для следующей итерации" 
+                   Foreground="#888888" HorizontalAlignment="Center" Margin="0,10,0,0" FontStyle="Italic"/>
+    </Grid>
+</Window>

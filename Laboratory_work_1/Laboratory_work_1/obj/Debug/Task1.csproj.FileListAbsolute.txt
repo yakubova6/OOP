@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\bin\Debug\Laboratory_work_1.exe.config
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\bin\Debug\Laboratory_work_1.exe
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\bin\Debug\Laboratory_work_1.pdb
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\obj\Debug\Task1.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\obj\Debug\Laboratory_work_1.exe
+C:\Users\User\source\repos\Laboratory_work_1\Laboratory_work_1\obj\Debug\Laboratory_work_1.pdb

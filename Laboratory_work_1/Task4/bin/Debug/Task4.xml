@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task4</name>
+    </assembly>
+    <members>
+        <member name="T:Task4.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Task4.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Task4.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Task4.MainWindow">
+            <summary>
+            Простое WPF-приложение для сложения двух чисел.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Task4.MainWindow.#ctor">
+            <summary>
+            Конструктор окна MainWindow.
+            </summary>
+        </member>
+        <member name="M:Task4.MainWindow.AddButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Выполняет сложение двух чисел, введённых пользователем.
+            </summary>
+            <param name="sender">Источник события (кнопка)</param>
+            <param name="e">Аргументы события</param>
+        </member>
+        <member name="M:Task4.MainWindow.ClearButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Очищает все поля ввода и результат.
+            </summary>
+            <param name="sender">Источник события (кнопка)</param>
+            <param name="e">Аргументы события</param>
+        </member>
+        <member name="M:Task4.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Task4.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Task4.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Task4.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

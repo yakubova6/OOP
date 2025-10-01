@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\Laboratory_work_1\Task2\bin\Debug\Task2.exe.config
+C:\Users\User\source\repos\Laboratory_work_1\Task2\bin\Debug\Task2.exe
+C:\Users\User\source\repos\Laboratory_work_1\Task2\bin\Debug\Task2.pdb
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\App.g.cs
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2_MarkupCompile.cache
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.g.resources
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.Properties.Resources.resources
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.exe
+C:\Users\User\source\repos\Laboratory_work_1\Task2\obj\Debug\Task2.pdb
