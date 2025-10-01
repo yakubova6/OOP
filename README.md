@@ -1,4 +1,6 @@
 # Object Oriented Programming
+[![C#](https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white)](#)
+![Progress](https://img.shields.io/badge/Progress-1%2F7%20Labs-brightgreen) 
 
 Репозиторий содержит лабораторные работы по **Объектно-Ориентированному Программированию** на языке C#, выполненные в рамках учебного курса.
 
